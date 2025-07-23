@@ -1,8 +1,8 @@
 const letras = {
   a: { palabra: "águila", imagen: "https://payload.cargocollective.com/1/6/194016/12196792/1_AGUILA_RGB_1000.jpg", width: 250, height: 200 },
   b: { palabra: "ballena", imagen: "https://i.pinimg.com/originals/24/29/72/242972fa41149ba5632fae85eb6c12d7.jpg", width: 300, height: 200 },
-  c: { palabra: "casa", imagen: "https://cdn.pixabay.com/photo/2012/04/13/00/15/house-31227_1280.png", width: 200, height: 200 },
-  d: { palabra: "dado", imagen: "https://cdn.pixabay.com/photo/2012/04/18/13/22/dice-37047_1280.png", width: 180, height: 180 },
+  c: { palabra: "cocodrilo", imagen: "https://tse3.mm.bing.net/th/id/OIP.ciZFxZr_vknf3laUo6IlDwAAAA?rs=1&pid=ImgDetMain&o=7&rm=3", width: 200, height: 200 },
+  d: { palabra: "dado", imagen: "https://i2.wp.com/www.imageneseducativas.com/wp-content/uploads/2017/03/Ficha-letra-d-delfin_c.gif?ssl=1", width: 180, height: 180 },
   e: { palabra: "elefante", imagen: "https://cdn.pixabay.com/photo/2012/04/01/16/49/elephant-23612_1280.png", width: 300, height: 200 },
   f: { palabra: "foca", imagen: "https://cdn.pixabay.com/photo/2021/12/11/13/24/seal-6862100_1280.png", width: 220, height: 160 },
   g: { palabra: "gato", imagen: "https://cdn.pixabay.com/photo/2017/11/09/21/41/cat-2934720_1280.jpg", width: 250, height: 200 },
@@ -31,12 +31,6 @@ Object.keys(letras).forEach(letra => {
   const btn = document.getElementById(letra);
   if (btn) {
     btn.addEventListener("click", () => {
-      const sonido = new Audio("sonidos/bubble-pop-06-351337.mp3");
-
-      sonido.play().catch((error) => {
-        console.error("Error al reproducir el sonido:", error);
-      });
-
       const { palabra, imagen, width, height } = letras[letra];
 
       Swal.fire({
