@@ -1,0 +1,23 @@
+/*Estilos principales del boton*/
+button {
+  background-color: #50b2b6; /*Color principal del botón*/
+  color: rgb(255, 255, 255); /*Color principal del texto*/
+  padding: 12px 20px; /*Espacio del texto dentro del boton*/
+  border: none; /*Que el boton no tenga borde*/
+  border-radius: 8px; /*Borde redondeado del boton*/
+  font-size: 16px; /*Tamaño de la fuente*/
+  font-weight: bold; /*Texto en negrita*/
+  cursor: pointer; /*Manito al pasar :3*/
+  transition: background-color 0.3s ease, transform 0.2s ease; /*Efecto sueve del color*/
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /*Sombra suave del boton*/
+}
+/*Efecto al pasar por encima del boton*/
+button:hover {
+  background-color: #7edb83; 
+  transform: scale(1.03);
+}
+/*Efectos al hacer click*/
+button:active {
+  transform: scale(0.97);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
