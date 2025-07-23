@@ -1,0 +1,113 @@
+/*Estilo del fondo y cuerpo del html*/
+body {
+  margin: 0;
+  padding: 2rem;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #cceeff, #b3e6ff); /*Para un cielo azul degradado*/
+  position: relative;
+  overflow-x: hidden;
+  color: #222;
+  z-index: 0;
+}
+/*Aqui use chat gpt :c para hacer la decoración de estrellas de fondo y que aparezcan en diferentes posiciones*/
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(white 2px, transparent 0),
+    radial-gradient(white 1.5px, transparent 0),
+    radial-gradient(white 2.2px, transparent 0),
+    radial-gradient(white 1.8px, transparent 0),
+    radial-gradient(white 2px, transparent 0),
+    radial-gradient(white 1px, transparent 0),
+    radial-gradient(white 2.5px, transparent 0);
+  background-size:
+    100px 100px,
+    150px 150px,
+    200px 200px,
+    180px 180px,
+    120px 120px,
+    160px 160px,
+    220px 220px;
+  background-position:
+    10% 20%,
+    25% 80%,
+    50% 50%,
+    75% 30%,
+    85% 70%,
+    65% 15%,
+    40% 90%;
+  opacity: 0.8;
+  z-index: 0;
+  animation: twinkleStars 3s infinite ease-in-out;
+  pointer-events: none;
+}
+/*Aqui tambien use chat gpt :c Se utiliza esta regla en css para definir una animación paso a paso*/
+/*En este caso simulamos efecto de parpadeo controlando la opacidad a lo largo del tiempo :3*/
+@keyframes twinkleStars {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+/*Decoración de estrellas para que no se vea tan simple jaja*/
+.star {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  box-shadow: 0 0 4px white;
+  animation: twinkle 3s infinite ease-in-out;
+}
+/*Efecto de las estrellas individuales*/
+@keyframes twinkle {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.3); }
+}
+/*Estilo del titulo*/
+h1 {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+}
+.subtitulo {
+  font-size: 2rem;  /* Tamaño un poco más grande */
+  font-weight: bold;  /* Negrita */
+  margin-bottom: 3rem;
+}
+/*Margenes y apariencia del contenedor de los botones del abecedario*/
+.abc-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+/*Estilos principales del boton*/
+button {
+  background-color: #50b2b6; /*Color principal del botón*/
+  color: rgb(255, 255, 255); /*Color principal del texto*/
+  padding: 50px 58px; /*Espacio del texto dentro del boton*/
+  border: none; /*Que el boton no tenga borde*/
+  border-radius: 8px; /*Borde redondeado del boton*/
+  font-size: 50px; /*Tamaño de la fuente*/
+  font-weight: bold; /*Texto en negrita*/
+  cursor: pointer; /*Manito al pasar :3*/
+  transition: background-color 0.3s ease, transform 0.2s ease; /*Efecto sueve del color*/
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /*Sombra suave del boton*/
+}
+/*Efecto al pasar por encima del boton*/
+button:hover {
+  background-color: #7edb83; 
+  transform: scale(1.03);
+}
+/*Efectos al hacer click*/
+button:active {
+  transform: scale(0.97);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
